@@ -105,7 +105,7 @@ class HomeContent extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Obx(
             () => Container(
-              height: 48,
+              height: 38,
               decoration: BoxDecoration(
                 color: const Color(0xFFEAF1FB),
                 borderRadius: BorderRadius.circular(30),
