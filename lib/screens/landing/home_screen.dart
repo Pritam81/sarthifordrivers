@@ -16,9 +16,6 @@ class BottomNavController extends GetxController {
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  final SecondaryTabController _tabController = Get.put(
-    SecondaryTabController(),
-  );
   final BottomNavController _bottomNavController = Get.put(
     BottomNavController(),
   );
