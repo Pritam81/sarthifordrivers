@@ -80,8 +80,10 @@ class _OneTimeRideScreenState extends State<OneTimeRideScreen> {
               ),
             ),
           ),
+          SizedBox(height: 5),
           Expanded(
             child: ListView.builder(
+              padding: EdgeInsets.zero, //
               itemCount: rideDetailsDemoData.length,
               itemBuilder: (context, index) {
                 final ride = rideDetailsDemoData[index];
