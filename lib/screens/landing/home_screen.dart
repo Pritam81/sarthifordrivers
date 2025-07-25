@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:saarthi_for_drivers/controller/secondary_tab_controller.dart';
 import 'package:saarthi_for_drivers/screens/landing/HomeTab/find_a_job_screen.dart';
 import 'package:saarthi_for_drivers/screens/landing/HomeTab/one_time_ride_screen.dart';
+import 'package:saarthi_for_drivers/screens/landing/ProfileTab/profile_screen.dart';
 import 'package:saarthi_for_drivers/utils/colors.dart';
 
 class BottomNavController extends GetxController {
@@ -25,7 +26,7 @@ class HomeScreen extends StatelessWidget {
     HomeContent(),
     Center(child: Text("🛠 Services View", style: TextStyle(fontSize: 16))),
     Center(child: Text("📋 Jobs View", style: TextStyle(fontSize: 16))),
-    Center(child: Text("👤 Profile View", style: TextStyle(fontSize: 16))),
+    DriverProfileScreen(),
   ];
 
   @override
@@ -76,8 +77,16 @@ class HomeScreen extends StatelessWidget {
 
 // -------------------- Home Content With Toggle --------------------
 
-class HomeContent extends StatelessWidget {
-  final SecondaryTabController _tabController = Get.find();
+class HomeContent extends StatefulWidget {
+  @override
+  State<HomeContent> createState() => _HomeContentState();
+}
+
+class _HomeContentState extends State<HomeContent> {
+  final SecondaryTabController _tabController = Get.put(
+    SecondaryTabController(),
+  );
+
   final List<String> secondaryTabs = ["Find a Job", "One Time Ride"];
 
   @override
