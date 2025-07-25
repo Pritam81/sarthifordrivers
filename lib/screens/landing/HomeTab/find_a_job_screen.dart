@@ -68,23 +68,22 @@ class _FindAJobScreenState extends State<FindAJobScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Column(
         children: [
-          SizedBox(height: 5),
-          Center(
-            child: Text(
-              "Job Post",
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                color: primaryColor,
-                fontSize: 16,
-              ),
+          Text(
+            "Job Post",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              color: primaryColor,
+              fontSize: 16,
             ),
           ),
 
           Expanded(
             child: ListView.builder(
+              padding: EdgeInsets.zero, //
               itemCount: jobPost.length,
               itemBuilder: (BuildContext context, int index) {
                 return jobPostCardDesign(
