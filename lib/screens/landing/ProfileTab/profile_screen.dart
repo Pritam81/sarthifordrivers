@@ -26,7 +26,7 @@ class _DriverProfileScreenState extends State<DriverProfileScreen> {
               ),
             ),
           ),
-          SizedBox(height: 50),
+
           Padding(
             padding: const EdgeInsets.only(top: 130.0),
             child: Container(
@@ -36,6 +36,19 @@ class _DriverProfileScreenState extends State<DriverProfileScreen> {
                   topLeft: Radius.circular(30),
                   topRight: Radius.circular(30),
                 ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 65,
+            left: MediaQuery.of(context).size.width / 2 - 60,
+
+            child: CircleAvatar(
+              backgroundColor: Colors.white,
+
+              radius: 60,
+              backgroundImage: NetworkImage(
+                "https://randomuser.me/api/portraits/men/45.jpg",
               ),
             ),
           ),
