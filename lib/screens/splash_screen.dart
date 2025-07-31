@@ -26,8 +26,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.pushReplacementNamed(context, '/onboarding');
-      // You can also use Navigator.pushReplacement to navigate to the RegisterScreen directly
-      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const RegisterScreen()));
+    
     });
   }
 
